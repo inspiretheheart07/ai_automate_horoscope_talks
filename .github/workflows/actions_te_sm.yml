@@ -152,11 +152,6 @@ jobs:
         with:
           fetch-depth: 1
 
-      #copy all assets
-      - name: Copy assets
-        run: |
-           find assets -type f -exec cp {} . \;
-
 # -------------------------------------------------
 # 4️⃣ RUN
 # -------------------------------------------------
@@ -207,12 +202,5 @@ jobs:
           print("Auth files created successfully")
           EOF
 
-      - name: Pick random music
-        id: music
-        run: |
-          NUM=$((1 + RANDOM % 23))
-          echo "num=$NUM" >> $GITHUB_OUTPUT
-          cp assets/music/$NUM.mp3 .
-
       - name: Execute main
-        run: python main_te_sm_hrscp.py "${{ steps.music.outputs.num }}"
+        run: python main_te_sm_hrscp.py
