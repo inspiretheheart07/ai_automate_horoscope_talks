@@ -1,8 +1,8 @@
-name: Telugu SM Horoscope Pipeline
+name: kannada SM Horoscope Pipeline
 
 on:
   schedule:
-    - cron: "30 20 * * *"
+    - cron: "00 21 * * *"
 
 concurrency:
   group: vionix-pipeline
@@ -203,7 +203,7 @@ jobs:
           EOF
 
       - name: Execute main
-        run: python main_te_sm_hrscp.py
+        run: python main_kn_sm_hrscp.py
       # -------------------------------------------------
       # 5️⃣ COLLECT & DOWNLOAD GENERATED VIDEO
       # -------------------------------------------------
@@ -224,14 +224,14 @@ jobs:
 
       - name: 🗜️ Zip final output (optional)
         run: |
-          zip -r telugu_sm_horoscope_video.zip final_output
+          zip -r kannada_sm_horoscope_video.zip final_output
 
       - name: ⬇️ Upload video for download
         uses: actions/upload-artifact@v5
         with:
-          name: telugu-sm-horoscope-video
+          name: kannada-sm-horoscope-video
           path: |
-            final_output/horoscope_disclaimer_te_sm.mp4
-            telugu_sm_horoscope_video.zip
+            final_output/horoscope_disclaimer_kn_sm.mp4
+            kannada_sm_horoscope_video.zip
           retention-days: 1
     
