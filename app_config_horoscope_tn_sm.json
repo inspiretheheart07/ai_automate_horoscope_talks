@@ -23,7 +23,7 @@
     "line_spacing": 1.15,
     "multi": true,
     "min_font_size": 10,
-    "max_font_size": 90,
+    "max_font_size": 70,
     "font_step": 2,
     "title": {
       "enabled": true,
