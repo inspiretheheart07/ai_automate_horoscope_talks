@@ -2,7 +2,7 @@ name: malayalam SM Horoscope Pipeline
 
 on:
   schedule:
-    - cron: "00 22 * * *"
+    - cron: "45 22 * * *"
 
 concurrency:
   group: vionix-pipeline
