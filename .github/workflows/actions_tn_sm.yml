@@ -6,7 +6,7 @@ on:
 
 concurrency:
   group: vionix-pipeline
-  cancel-in-progress: true
+ 
 
 env:
   PYTHONUNBUFFERED: "1"
