@@ -95,7 +95,7 @@
     "duration": 2
   },
    "upload": {
-    "enabled": false,
+    "enabled": true,
     "youtube": { "enabled": true },
     "facebook": { "enabled": true },
     "instagram": { "enabled": true },
